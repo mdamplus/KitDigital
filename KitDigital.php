@@ -6,7 +6,7 @@ Plugin URI: https://informaticasa.es
 Description: This plugin allow to insert a shortcode with legal logos for Spanish KitDigital using SVG vector logos, switching color,width and Height
 Version:2023.3
 Author: Martín D. Arnedo Mahr
-Author URI: https://martinarnedo.es/
+Author URI: https://github.com/mdamplus/KitDigital
 
 License: GPL2
 Text Domain:mdamz
