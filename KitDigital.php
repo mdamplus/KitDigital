@@ -52,16 +52,15 @@ function color_kit_digital_shortcode($atts) {
    
     $atributos = shortcode_atts(array(
         'color' => '#000',    // color del titulo
-        'ancho' => '1000'   // Ancho de la imagen en porcentaje
+        'ancho' => '100'   // Ancho de la imagen en px
     ), $atts);
     
   
    
     $tit = '<h3 class="kitColor" style="color:' . $atributos['color'] . ';">Financiado por la Unión Europea - NextGenerationEU</h3>';
-    $svg .= '<div class="kitColorLogos" style="width: ' . $atributos['ancho'] . 'px" >';
+    $svg .= '<div class="kitColorLogos" style="max-width: ' . $atributos['ancho'] . 'px" >';
     $svg .= '<?xml version="1.0" encoding="utf-8"?>
-<!-- SVG Logos color EU + Gobierno de Esp. + KitDigital zZZz --><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 1020 73" >
+<!-- SVG Logos color EU + Gobierno de Esp. + KitDigital zZZz --><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1020 73" >
 <style type="text/css">
 	.st0{fill:#FFFFFF;}
 	.st1{fill:#034EA2;}
@@ -1687,13 +1686,13 @@ function negro_kit_digital_shortcode($atts) {
    
     $atributos = shortcode_atts(array(
         'color' => '#333',    // color del titulo y contenido
-        'ancho' => '1000'   // Ancho de la imagen en porcentaje
+        'ancho' => '1000'   // Ancho de la imagen en pixeles
     ), $atts);
     
   
    
     $tit = '<h3 class="kitNegro" style="color:' . $atributos['color'] . ';">Financiado por la Unión Europea - NextGenerationEU</h3>';
-    $svg .= '<div class="kitNegroLogos" style="width: ' . $atributos['ancho'] . 'px" >';
+    $svg .= '<div class="kitNegroLogos" style="max-width: ' . $atributos['ancho'] . 'px" >';
     $svg .= '<?xml version="1.0" encoding="utf-8"?>
 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1020 73" style="enable-background:new 0 0 1020 73;" xml:space="preserve">
@@ -3273,13 +3272,13 @@ function blanco_kit_digital_shortcode($atts) {
    
     $atributos = shortcode_atts(array(
         'color' => '#fff',    // color del titulo y logos
-        'ancho' => '1000'   // Ancho de la imagen en porcentaje
+        'ancho' => '1000'   // Ancho de la imagen en pixeles
     ), $atts);
     
   
    
     $tit = '<h3 class="kitBlanco" style="color:' . $atributos['color'] . ';">Financiado por la Unión Europea - NextGenerationEU</h3>';
-    $svg .= '<div class="kitBlancoLogos" style="width: ' . $atributos['ancho'] . 'px" >';
+    $svg .= '<div class="kitBlancoLogos" style="max-width: ' . $atributos['ancho'] . 'px" >';
     $svg .= '<?xml version="1.0" encoding="utf-8"?>
 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1020 73" style="enable-background:new 0 0 1020 73;" xml:space="preserve">
@@ -4854,13 +4853,13 @@ function custom_kit_digital_shortcode($atts) {
    
     $atributos = shortcode_atts(array(
         'color' => '#1f64d2',    // color del titulo
-        'ancho' => '1000'   // Ancho de la imagen en porcentaje
+        'ancho' => '1000'   // Ancho de la imagen en pixeles
     ), $atts);
     
   
    
     $tit = '<h3 class="kitCustom" style="color:' . $atributos['color'] . ';">Financiado por la Unión Europea - NextGenerationEU</h3>';
-    $svg .= '<div class="kitCustomLogos" style="width: ' . $atributos['ancho'] . 'px" >';
+    $svg .= '<div class="kitCustomLogos" style="max-width: ' . $atributos['ancho'] . 'px" >';
  $svg .= '<?xml version="1.0" encoding="utf-8"?>
 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1020 73" style="enable-background:new 0 0 1020 73;" xml:space="preserve">
