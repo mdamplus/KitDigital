@@ -1,0 +1,33 @@
+<html>
+    <head></head>
+    <body>
+        <p>contenido que copiar</p>
+        <script>function pasteFromClipboard(elementId) {
+  // Create a temporary input element to retrieve text from the clipboard
+  const tempInput = document.createElement("textarea");
+  tempInput.style.position = "absolute";
+  tempInput.style.left = "-1000px";
+  tempInput.style.top = "-1000px";
+  document.body.appendChild(tempInput);
+
+  // Trigger a paste event to retrieve text from the clipboard
+  tempInput.focus();
+  document.execCommand("paste");
+
+  // Get the text from the temporary input element
+  const text = tempInput.value.trim();
+  document.body.removeChild(tempInput);
+
+  // Append the text to the specified element
+  const element = document.getElementById(elementId);
+  const currentText = element.textContent.trim();
+  element.textContent = currentText + " " + text + " Other_text";
+}</script>
+       <div>
+       <input type="text" id="paste">
+<button onclick="pasteFromClipboard('myElement')">Paste from clipboard</button> 
+        </div> 
+    </body>
+    
+    
+</html>
