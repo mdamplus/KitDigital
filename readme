@@ -11,8 +11,9 @@ Shortcode en color [color_kit_digital color="red" ancho="500"]
     font-size: 30px;}
     
     Nota: El conjunto vectorial en svg y a color, posee una clase llamada kitColorLogos.
-    
-    Las variaciones son:
+
+
+Las variaciones son:
     
     [color_kit_digital]  => color="" ancho=""   CSS: .kitColor  .kitColorLogos
     
@@ -21,3 +22,9 @@ Shortcode en color [color_kit_digital color="red" ancho="500"]
     [blanco_kit_digital]  => ancho=""           CSS: .kitBlanco  .kitBlancoLogos
     
     [Custom_kit_digital]  => color="" ancho=""  CSS: .kitCustom  .kitCustomLogos
+    
+    [color_informaticasa] => ancho=""           CSS: .inforzz
+    
+    [blanco_informaticasa] => ancho=""          CSS: .inforzz
+    
+    [negro_informaticasa] => ancho=""           CSS: .inforzz
