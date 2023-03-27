@@ -28,3 +28,10 @@ Las variaciones son:
     [blanco_informaticasa] => ancho=""          CSS: .inforzz
     
     [negro_informaticasa] => ancho=""           CSS: .inforzz
+
+
+Se incorpora una capa de personalización en wp-login.php de acuerdo a la identidad corporativa de la empresa.
+
+Se personaliza el backoffice de wordpress (/wp-admin) a nivel estilos y se incorpora un link de soporte técnico.
+
+Proyecto realizado con #PHP #JS #HTML5 #CSS3
