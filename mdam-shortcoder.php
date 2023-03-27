@@ -21,6 +21,7 @@ require_once(plugin_dir_path(__FILE__) . 'modules/informaticasa.php');
 require_once(plugin_dir_path(__FILE__) . 'modules/kitdigital.php');
 require_once(plugin_dir_path(__FILE__) . 'modules/brand.php');
 require_once(plugin_dir_path(__FILE__) . 'modules/back.php');
+require_once(plugin_dir_path(__FILE__) . 'modules/backOffice.php');
 
 
 
