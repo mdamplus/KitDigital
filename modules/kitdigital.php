@@ -8,18 +8,16 @@ Inicio Bloque de Logos Kit Digital
 */
 /************************************************************************/
 
-function color_kit_digital_shortcode($atts) {
+function color_kit_digital_shortcode($atts5) {
    
-    $atributos = shortcode_atts(array(
+    $atributos5 = shortcode_atts(array(
         'color' => '#000',    // color del titulo
         'ancho' => '100'   // Ancho maximo de la imagen en px en px
-    ), $atts);
+    ), $atts5);
     
   
    
-    $tit = '<h3 class="kitColor" style="color:' . $atributos['color'] . ';">Financiado por la Unión Europea - NextGenerationEU</h3>';
-    $svg .= '<div class="kitColorLogos" style="max-width: ' . $atributos['ancho'] . 'px" >';
-    $svg .= '<?xml version="1.0" encoding="utf-8"?>
+    $output5 = '<h3 class="kitColor" style="color:' . $atributos5['color'] . ';">Financiado por la Unión Europea - NextGenerationEU</h3><div class="kitColorLogos" style="max-width: ' . $atributos5['ancho'] . 'px" ><?xml version="1.0" encoding="utf-8"?>
 <!-- SVG Logos color EU + Gobierno de Esp. + KitDigital zZZz --><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1020 73" >
 <style type="text/css">
 	.st0{fill:#FFFFFF;}
@@ -1629,35 +1627,32 @@ function color_kit_digital_shortcode($atts) {
 		c0.2-0.2,0.2-0.3,0.2-0.5c0-0.2-0.1-0.4-0.2-0.5c-0.2-0.1-0.3-0.2-0.6-0.2C87.5,24.5,87.3,24.6,87.2,24.8 M80.3,33.9h1.4v-4.7h3.9
 		v-1.3h-3.9v-2.8h3.9v-1.3h-5.3V33.9z"/>
 </g>
-</svg>';
-$svg .= '</div>';
+</svg></div>';
 
 
-    $output = $tit . $svg;
+   
 
-    return $output;
+    return $output5;
 }
 add_shortcode('color_kit_digital', 'color_kit_digital_shortcode');
 
 //fin color
 
 //inicio negro
-function negro_kit_digital_shortcode($atts) {
+function negro_kit_digital_shortcode($atts6) {
    
-    $atributos = shortcode_atts(array(
+    $atributos6 = shortcode_atts(array(
         'color' => '#333',    // color del titulo y contenido
         'ancho' => '1000'   // Ancho maximo de la imagen en px en pixeles
-    ), $atts);
+    ), $atts6);
     
   
    
-    $tit = '<h3 class="kitNegro" style="color:' . $atributos['color'] . ';">Financiado por la Unión Europea - NextGenerationEU</h3>';
-    $svg .= '<div class="kitNegroLogos" style="max-width: ' . $atributos['ancho'] . 'px" >';
-    $svg .= '<?xml version="1.0" encoding="utf-8"?>
+    $output6 = '<h3 class="kitNegro" style="color:' . $atributos6['color'] . ';">Financiado por la Unión Europea - NextGenerationEU</h3><div class="kitNegroLogos" style="max-width: ' . $atributos6['ancho'] . 'px" ><?xml version="1.0" encoding="utf-8"?>
 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1020 73" style="enable-background:new 0 0 1020 73;" xml:space="preserve">
 <style type="text/css">
-	.st0000,.st1111{fill:'. $atributos['color'] . '}
+	.st0000,.st1111{fill:'. $atributos6['color'] . '}
 	.st1111{fill-rule:evenodd;clip-rule:evenodd;}
 </style>
 <g>
@@ -3212,13 +3207,10 @@ function negro_kit_digital_shortcode($atts) {
 	V33.9z M87.2,24.8c-0.2,0.2-0.2,0.3-0.2,0.5c0,0.2,0.1,0.4,0.2,0.5c0.2,0.2,0.3,0.2,0.5,0.2c0.2,0,0.4-0.1,0.6-0.2
 	c0.2-0.2,0.2-0.3,0.2-0.5c0-0.2-0.1-0.4-0.2-0.5c-0.2-0.1-0.3-0.2-0.6-0.2C87.5,24.5,87.3,24.6,87.2,24.8 M80.3,33.9h1.4v-4.7h3.9
 	v-1.3h-3.9v-2.8h3.9v-1.3h-5.3V33.9z"/>
-</svg>';
-$svg .= '</div>';
+</svg></div>';
 
 
-    $output = $tit . $svg;
-
-    return $output;
+    return $output6;
 }
 add_shortcode('negro_kit_digital', 'negro_kit_digital_shortcode');
 
@@ -3228,22 +3220,20 @@ add_shortcode('negro_kit_digital', 'negro_kit_digital_shortcode');
 
 //inicio blanco
 
-function blanco_kit_digital_shortcode($atts) {
+function blanco_kit_digital_shortcode($atts7) {
    
-    $atributos = shortcode_atts(array(
+    $atributos7 = shortcode_atts(array(
         'color' => '#fff',    // color del titulo y logos
         'ancho' => '1000'   // Ancho maximo de la imagen en px en pixeles
-    ), $atts);
+    ), $atts7);
     
   
    
-    $tit = '<h3 class="kitBlanco" style="color:' . $atributos['color'] . ';">Financiado por la Unión Europea - NextGenerationEU</h3>';
-    $svg .= '<div class="kitBlancoLogos" style="max-width: ' . $atributos['ancho'] . 'px" >';
-    $svg .= '<?xml version="1.0" encoding="utf-8"?>
+    $output7 = '<h3 class="kitBlanco" style="color:' . $atributos7['color'] . ';">Financiado por la Unión Europea - NextGenerationEU</h3><div class="kitBlancoLogos" style="max-width: ' . $atributos7['ancho'] . 'px" ><?xml version="1.0" encoding="utf-8"?>
 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1020 73" style="enable-background:new 0 0 1020 73;" xml:space="preserve">
 <style type="text/css">
-	.st00,.st11{fill:'. $atributos['color'] . '}
+	.st00,.st11{fill:'. $atributos7['color'] . '}
 	.st11{fill-rule:evenodd;clip-rule:evenodd;}
 </style>
 <g>
@@ -4798,33 +4788,28 @@ function blanco_kit_digital_shortcode($atts) {
 	V33.9z M87.2,24.8c-0.2,0.2-0.2,0.3-0.2,0.5c0,0.2,0.1,0.4,0.2,0.5c0.2,0.2,0.3,0.2,0.5,0.2c0.2,0,0.4-0.1,0.6-0.2
 	c0.2-0.2,0.2-0.3,0.2-0.5c0-0.2-0.1-0.4-0.2-0.5c-0.2-0.1-0.3-0.2-0.6-0.2C87.5,24.5,87.3,24.6,87.2,24.8 M80.3,33.9h1.4v-4.7h3.9
 	v-1.3h-3.9v-2.8h3.9v-1.3h-5.3V33.9z"/>
-</svg>';
-$svg .= '</div>';
+</svg></div>';
 
 
-    $output = $tit . $svg;
-
-    return $output;
+    return $output7;
 }
 add_shortcode('blanco_kit_digital', 'blanco_kit_digital_shortcode');
 //fin blanco
 //inicio color personalizado
-function custom_kit_digital_shortcode($atts) {
+function custom_kit_digital_shortcode($atts8) {
    
-    $atributos = shortcode_atts(array(
+    $atributos8 = shortcode_atts(array(
         'color' => '#1f64d2',    // color del titulo
         'ancho' => '1000'   // Ancho maximo de la imagen en px en pixeles
-    ), $atts);
+    ), $atts8);
     
   
    
-    $tit = '<h3 class="kitCustom" style="color:' . $atributos['color'] . ';">Financiado por la Unión Europea - NextGenerationEU</h3>';
-    $svg .= '<div class="kitCustomLogos" style="max-width: ' . $atributos['ancho'] . 'px" >';
- $svg .= '<?xml version="1.0" encoding="utf-8"?>
+    $output8 = '<h3 class="kitCustom" style="color:' . $atributos8['color'] . ';">Financiado por la Unión Europea - NextGenerationEU</h3><div class="kitCustomLogos" style="max-width: ' . $atributos8['ancho'] . 'px" ><?xml version="1.0" encoding="utf-8"?>
 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1020 73" style="enable-background:new 0 0 1020 73;" xml:space="preserve">
 <style type="text/css">
-	.st000,.st111{fill:'. $atributos['color'] . '}
+	.st000,.st111{fill:'. $atributos8['color'] . '}
 	.st111{fill-rule:evenodd;clip-rule:evenodd;}
 </style>
 <g>
@@ -6379,13 +6364,10 @@ function custom_kit_digital_shortcode($atts) {
 	V33.9z M87.2,24.8c-0.2,0.2-0.2,0.3-0.2,0.5c0,0.2,0.1,0.4,0.2,0.5c0.2,0.2,0.3,0.2,0.5,0.2c0.2,0,0.4-0.1,0.6-0.2
 	c0.2-0.2,0.2-0.3,0.2-0.5c0-0.2-0.1-0.4-0.2-0.5c-0.2-0.1-0.3-0.2-0.6-0.2C87.5,24.5,87.3,24.6,87.2,24.8 M80.3,33.9h1.4v-4.7h3.9
 	v-1.3h-3.9v-2.8h3.9v-1.3h-5.3V33.9z"/>
-</svg>';
-$svg .= '</div>';
+</svg></div>';
 
 
-    $output = $tit . $svg;
-
-    return $output;
+    return $output8;
 }
 add_shortcode('custom_kit_digital', 'custom_kit_digital_shortcode');
 

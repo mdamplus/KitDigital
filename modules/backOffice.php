@@ -60,13 +60,7 @@ wpadminbar:hover #wp-admin-bar-wp-logo>.ab-item:hover .ab-icon:before {
 }
 add_action('admin_head', 'custom_admin_css');
 
-function z_toolbar_items($wp_admin_bar) {
-			$wp_admin_bar->add_node( array(
-			'id'		=> 'supportlink',
-			'title' => '<span class="ab-icon" aria-hidden="true"></span><span class="ab-label">Soporte Técnico 959 128 851</span>',
-			'href' => 'tel:959128851',
-			
-		) );
-}
 
-add_action('admin_bar_menu', 'z_toolbar_items', 999);
+//say no more... zZz
+
+?>

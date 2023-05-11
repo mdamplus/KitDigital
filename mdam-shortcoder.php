@@ -22,6 +22,12 @@ require_once(plugin_dir_path(__FILE__) . 'modules/kitdigital.php');
 require_once(plugin_dir_path(__FILE__) . 'modules/brand.php');
 require_once(plugin_dir_path(__FILE__) . 'modules/back.php');
 require_once(plugin_dir_path(__FILE__) . 'modules/backOffice.php');
+require_once(plugin_dir_path(__FILE__) . 'modules/svg.php');
+require_once(plugin_dir_path(__FILE__) . 'modules/nofilter.php');
+require_once(plugin_dir_path(__FILE__) . 'modules/soporte.php');
+require_once(plugin_dir_path(__FILE__) . 'modules/notice.php');
+require_once(plugin_dir_path(__FILE__) . 'modules/text-to-speech.php');
+require_once(plugin_dir_path(__FILE__) . 'modules/accessible.php');
 
 
 

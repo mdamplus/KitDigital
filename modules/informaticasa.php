@@ -17,17 +17,16 @@
 */
 /************************************************************************/
 
-function color_informaticasa_shortcode($atts) {
+function color_informaticasa_shortcode($atts1) {
    
-    $atributos = shortcode_atts(array(
+    $attributo1 = shortcode_atts(array(
         'color' => '',    // color del titulo
         'ancho' => '200'   // Ancho maximo de la imagen en px en px
-    ), $atts);
+    ), $atts1);
     
 
-    $svg .= '<div class="inforzz" style="max-width: ' . $atributos['ancho'] . 'px" >';
-    $svg .= '<a href="https://informaticasa.es/?ztrack=footerkit" target="_blank"  Title="Tramitador Kit Digital en Huelva - Informaticasa">';
-    $svg .= '<?xml version="1.0" encoding="utf-8"?>
+    $output1 = '<div class="inforzz" style="max-width: ' . $attributo1['ancho'] . 'px" ><a href="https://informaticasa.es/?ztrack=footerkit" target="_blank"  Title="Tramitador Kit Digital en Huelva - Informaticasa">
+		<?xml version="1.0" encoding="utf-8"?>
 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1000 376" style="enable-background:new 0 0 1000 376;" xml:space="preserve">
 <style type="text/css">
@@ -205,13 +204,11 @@ function color_informaticasa_shortcode($atts) {
 	c-2.9,6.1-9.3,20.1-7.6,38.7c1.4,15.2,7.4,25.9,11.2,32.3c5.6,9.6,11.9,16.4,16.5,20.7c-6.3,5.1-18.4,13.8-35.9,17.7
 	c-18.7,4.2-33.2,0.5-40.7,0.9c-8.1,4.4-18.1,8.7-26.2,13.1c-47.2,29.2-24.5-2.6-24.3-3c5-8.3,10.3-18,10.5-30.6
 	c-6.2-6.1-10.5-10.7-14.6-17.2c-19.8-31.3-13.5-67.7,7.5-91.6C561.4,11.9,594.2,10,594.8,9.7z"/>
-</svg>';
-    $svg .= '</a>';
-    $svg .= '</div>';
+</svg></a></div>';
     
-    $output = $svg;
+    
 
-    return $output;
+    return $output1;
 }
 add_shortcode('color_informaticasa', 'color_informaticasa_shortcode');
 //fin color informatica
@@ -219,17 +216,15 @@ add_shortcode('color_informaticasa', 'color_informaticasa_shortcode');
 
 
 //inicio blanco informaticasa
-function blanco_informaticasa_shortcode($atts) {
+function blanco_informaticasa_shortcode($atts2) {
    
-    $atributos = shortcode_atts(array(
+    $atributos2 = shortcode_atts(array(
         'color' => '#FFF',    // color del titulo
         'ancho' => '200'   // Ancho maximo de la imagen en px en px
-    ), $atts);
+    ), $atts2);
     
 
-    $svg .= '<div class="inforzz" style="max-width: ' . $atributos['ancho'] . 'px" >';
-    $svg .= '<a href="https://informaticasa.es/?ztrack=footerkit" target="_blank"  Title="Tramitador Kit Digital en Huelva - Informaticasa">';
-    $svg .= '<?xml version="1.0" encoding="utf-8"?>
+    $output2 = '<div class="inforzz" style="max-width: ' . $atributos2['ancho'] . 'px" ><a href="https://informaticasa.es/?ztrack=footerkit" target="_blank"  Title="Tramitador Kit Digital en Huelva - Informaticasa"><?xml version="1.0" encoding="utf-8"?>
 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1000 376" style="enable-background:new 0 0 1000 376;" xml:space="preserve">
 <style type="text/css">
@@ -411,29 +406,23 @@ function blanco_informaticasa_shortcode($atts) {
 	c-2.9,6.1-9.3,20.1-7.6,38.7c1.4,15.2,7.4,25.9,11.2,32.3c5.6,9.6,11.9,16.4,16.5,20.7c-6.3,5.1-18.4,13.8-35.9,17.7
 	c-18.7,4.2-33.2,0.5-40.7,0.9c-8.1,4.4-18.1,8.7-26.2,13.1c-47.2,29.2-24.5-2.6-24.3-3c5-8.3,10.3-18,10.5-30.6
 	c-6.2-6.1-10.5-10.7-14.6-17.2c-19.8-31.3-13.5-67.7,7.5-91.6C561.4,11.9,594.2,10,594.8,9.7z"/>
-</svg>';
-    $svg .= '</a>';
-    $svg .= '</div>';
+</svg></a></div>';
     
-    $output = $svg;
-
-    return $output;
+    return $output2;
 }
 add_shortcode('blanco_informaticasa', 'blanco_informaticasa_shortcode');
 // fin blanco informaticasa
 
 //inicio negro informaticasa
-function negro_informaticasa_shortcode($atts) {
+function negro_informaticasa_shortcode($atts3) {
    
-    $atributos = shortcode_atts(array(
+    $atributos3 = shortcode_atts(array(
         'color' => '#333',    // color del titulo
         'ancho' => '200'   // Ancho maximo de la imagen en px en px
-    ), $atts);
+    ), $atts3);
     
 
-    $svg .= '<div class="inforzz" style="max-width: ' . $atributos['ancho'] . 'px" >';
-    $svg .= '<a href="https://informaticasa.es/?ztrack=footerkit" target="_blank"  Title="Tramitador Kit Digital en Huelva - Informaticasa">';
-    $svg .= '<?xml version="1.0" encoding="utf-8"?>
+    $output3 = '<div class="inforzz" style="max-width: ' . $atributos3['ancho'] . 'px" ><a href="https://informaticasa.es/?ztrack=footerkit" target="_blank"  Title="Tramitador Kit Digital en Huelva - Informaticasa"><?xml version="1.0" encoding="utf-8"?>
 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1000 376" style="enable-background:new 0 0 1000 376;" xml:space="preserve">
 <style type="text/css">
@@ -615,34 +604,30 @@ function negro_informaticasa_shortcode($atts) {
 	c-2.9,6.1-9.3,20.1-7.6,38.7c1.4,15.2,7.4,25.9,11.2,32.3c5.6,9.6,11.9,16.4,16.5,20.7c-6.3,5.1-18.4,13.8-35.9,17.7
 	c-18.7,4.2-33.2,0.5-40.7,0.9c-8.1,4.4-18.1,8.7-26.2,13.1c-47.2,29.2-24.5-2.6-24.3-3c5-8.3,10.3-18,10.5-30.6
 	c-6.2-6.1-10.5-10.7-14.6-17.2c-19.8-31.3-13.5-67.7,7.5-91.6C561.4,11.9,594.2,10,594.8,9.7z"/>
-</svg>';
-    $svg .= '</a>';
-    $svg .= '</div>';
+</svg></a></div>';
     
-    $output = $svg;
 
-    return $output;
+    return $output3;
+
 }
 add_shortcode('negro_informaticasa', 'negro_informaticasa_shortcode');
 // fin negro informaticasa
 
 //inicio custom informaticasa
-function custom_informaticasa_shortcode($atts) {
+function custom_informaticasa_shortcode($atts4) {
    
-    $atributos = shortcode_atts(array(
+    $atributos4 = shortcode_atts(array(
         'color' => '#333',    // color del titulo
         'ancho' => '200'   // Ancho maximo de la imagen en px en px
-    ), $atts);
+    ), $atts4);
     
 
-    $svg .= '<div class="inforzz" style="max-width: ' . $atributos['ancho'] . 'px" >';
-    $svg .= '<a href="https://informaticasa.es/?ztrack=footerkit" target="_blank"  Title="Tramitador Kit Digital en Huelva - Informaticasa">';
-    $svg .= '<?xml version="1.0" encoding="utf-8"?>
+    $output4='<div class="inforzz" style="max-width: ' . $atributos4['ancho'] . 'px" ><a href="https://informaticasa.es/?ztrack=footerkit" target="_blank"  Title="Tramitador Kit Digital en Huelva - Informaticasa"><?xml version="1.0" encoding="utf-8"?>
 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1000 376" style="enable-background:new 0 0 1000 376;" xml:space="preserve">
 <style type="text/css">
-	.st0custom{fill:'. $atributos['color'] . '}
-	.st1custom{fill-rule:evenodd;clip-rule:evenodd;fill:'. $atributos['color'] . '}
+	.st0custom{fill:'. $atributos4['color'] . '}
+	.st1custom{fill-rule:evenodd;clip-rule:evenodd;fill:'. $atributos4['color'] . '}
 </style>
 <g>
 	<path class="st0custom" d="M5.2,208.9c0-2.4,0.9-4.5,2.6-6.3c1.7-1.8,3.8-2.7,6.3-2.7c2.5,0,4.6,0.9,6.3,2.6c1.7,1.7,2.6,3.8,2.6,6.3
@@ -820,10 +805,8 @@ function custom_informaticasa_shortcode($atts) {
 	c-18.7,4.2-33.2,0.5-40.7,0.9c-8.1,4.4-18.1,8.7-26.2,13.1c-47.2,29.2-24.5-2.6-24.3-3c5-8.3,10.3-18,10.5-30.6
 	c-6.2-6.1-10.5-10.7-14.6-17.2c-19.8-31.3-13.5-67.7,7.5-91.6C561.4,11.9,594.2,10,594.8,9.7z"/>
 </svg>';
-    $svg .= '</div>';
-     $output = $svg;
 
-    return $output;
+    return $output4;
 }
 add_shortcode('custom_informaticasa', 'custom_informaticasa_shortcode');
 // fin custom informaticasa

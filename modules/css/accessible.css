@@ -1,0 +1,104 @@
+/*@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');*/
+@import('https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css'); /* Importa Font Awesome para fines de compatibilidad */
+@import url('https://wordpress.org/latest/wp-includes/css/dashicons.min.css');
+
+
+#boton-accesibilidad {
+    position: fixed;
+    border: 1px solid #fff;
+    top: 255px;
+    left: -12px;
+    /* transform: translateY(-50%); */
+    background-color: rgba(255, 255, 255, 0.3);
+    color: var(--e-global-color-nvprimaryaccent);
+    width: 52px;
+    height: 40px;
+    /* border-radius: 50%; */
+     box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    z-index: 9999;
+}
+
+
+#boton-accesibilidad:hover {
+    transform: translateX(10px);
+    top: 255px;
+    z-index: 9999;
+}
+
+
+#boton-accesibilidad button {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    color: #333;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    z-index: 9999;
+}
+
+
+#boton-accesibilidad button:hover {
+    background-color: #f1f1f1;
+    z-index: 9999;
+}
+
+
+.contraste-negativo {
+    filter: invert(100%);
+}
+
+.escala-grises {
+    filter: grayscale(100%);
+    
+}
+
+.ocultar-bg{
+   background: transparent;
+}
+  
+.alto-contraste{
+ background: #000;
+ color: #fff !important;
+
+/* background-color: black;
+   color: white;*/
+   /* filter: contrast(200%);*/
+
+}
+
+
+#menu-accesibilidad {
+    position: fixed;
+    /* top: 310px;*/
+    left: -200px;
+    /* Posiciona el menú fuera de la pantalla */
+    width: 200px;
+    max-height: 350px;
+    min-height: 250px;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: var(--e-global-color-nvprimaryaccent);
+    transition: left 0.3s ease-out;
+    z-index: 9999;
+    /* Agrega una transición suave al desplazar el menú */
+}
+
+
+#menu-accesibilidad.mostrar {
+    left: 45px;
+    z-index:10;
+    /* Desplaza el menú al centro de la pantalla */
+    /*top: 255px;*/
+}
+
+
+#menu-accesibilidad.mostrar:hover {
+    left: 45px;
+    /* Desplaza el menú al centro de la pantalla */
+    /*top: 255px;*/
+}
