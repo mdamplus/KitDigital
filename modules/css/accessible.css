@@ -1,20 +1,15 @@
-/*@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');*/
-@import('https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css'); /* Importa Font Awesome para fines de compatibilidad */
-@import url('https://wordpress.org/latest/wp-includes/css/dashicons.min.css');
-
-
 #boton-accesibilidad {
     position: fixed;
-    border: 1px solid #fff;
-    top: 255px;
+    border:solid 1px #ccc;
+    bottom: 140px;
     left: -12px;
     /* transform: translateY(-50%); */
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.7);
     color: var(--e-global-color-nvprimaryaccent);
     width: 52px;
     height: 40px;
-    /* border-radius: 50%; */
-     box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
+    border-radius: 0 10px 10px 0;
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -23,15 +18,10 @@
     margin-bottom: 5px;
     z-index: 9999;
 }
-
-
 #boton-accesibilidad:hover {
-    transform: translateX(10px);
-    top: 255px;
+    transform: translateX(4px);
     z-index: 9999;
 }
-
-
 #boton-accesibilidad button {
     background-color: #fff;
     border: 1px solid #ccc;
@@ -41,64 +31,1004 @@
     width: 50px;
     z-index: 9999;
 }
-
-
 #boton-accesibilidad button:hover {
     background-color: #f1f1f1;
     z-index: 9999;
 }
 
+#menu-accesibilidad {
+    position: absolute;
+    bottom: -2px;
+    left: -250px;
+    /* Posiciona el menú fuera de la pantalla */
+    opacity: 0;
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border:solid 1px #ccc;
+    color: var(--e-global-color-nvprimaryaccent);
+    z-index: 9999;
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
+    max-height: calc(100vh - 30px);
+    overflow: auto;
+    border-radius: 10px;
+    /* Agrega una transición suave al desplazar el menú */
+    transition: left 0.3s ease-out;
 
-.contraste-negativo {
+}
+#menu-accesibilidad .dashicons{    
+    font-size: 1em;
+    line-height: 1.2em;
+}
+#menu-accesibilidad ul{
+    list-style: none;
+    margin: 25px 20px;
+}
+#menu-accesibilidad li{
+    line-height: 1.2;
+    margin-bottom: 10px;
+    font-size: 14px !important;
+}
+#menu-accesibilidad li a{
+    padding: 8px 0;
+    text-decoration: none;
+    color: #333;
+}
+#menu-accesibilidad li a:hover{
+    color:rgb(19, 130, 145);
+}
+#menu-accesibilidad.mostrar {
+    left: 54px;
+    z-index:10;
+    opacity: 1;
+}
+#menu-accesibilidad.mostrar:hover {
+    left: 54px;
+    margin-left: -4px;
+}
+#boton-accesibilidad:hover #menu-accesibilidad.mostrar{
+    margin-left: -4px;
+}
+#menu-accesibilidad li a::after{
+    font-family: dashicons;
+    display: inline-block;
+    line-height: 1;
+    font-weight: 400;
+    font-style: normal;
+    speak: never;
+    text-decoration: inherit;
+    text-transform: none;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    vertical-align: top;
+    text-align: center;
+    transition: color .1s ease-in;
+    font-size: 1em;
+    line-height: 1.2em;
+    color: rgb(18, 122, 18);
+} 
+body.escala-grises #escala-grises{
+ font-weight: bolder;
+} 
+body.escala-grises #escala-grises::after{
+    content: "\f12a";
+} 
+body.alto-contraste #alto-contraste{
+ font-weight: bolder;
+} 
+body.alto-contraste #alto-contraste::after{
+    content: "\f12a";
+} 
+body.contraste-negativo #contraste-negativo{
+ font-weight: bolder;
+} 
+body.contraste-negativo #contraste-negativo::after{
+    content: "\f12a";
+} 
+body.ocultar-bg #solo-texto{
+ font-weight: bolder;
+} 
+body.ocultar-bg #solo-texto::after{
+    content: "\f12a";
+} 
+
+/* -------------------------------------------   */
+.contraste-negativo > div {
     filter: invert(100%);
+    -webkit-filter: invert(100%);
+    -moz-filter: invert(100%);
+    -ms-filter: invert(100%);
+    -o-filter: invert(100%);
 }
 
-.escala-grises {
+.escala-grises > div{
     filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -webkit-filter: grayscale(1);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: gray;
     
 }
-
-.ocultar-bg{
-   background: transparent;
+/* ################### solo texto ###################*/
+.ocultar-bg header, .ocultar-bg #transparent-header-wrap ,.ocultar-bg #site-header{
+    position: relative !important;
 }
-  
-.alto-contraste{
- background: #000;
- color: #fff !important;
-
-/* background-color: black;
-   color: white;*/
-   /* filter: contrast(200%);*/
-
+.ocultar-bg header *{
+    background: #fff !important;
+    background-color: #fff !important;
+    color: #353535 !important;
+    border: none !important;
+}
+.ocultar-bg main :not(style, script),
+.ocultar-bg footer :not(style, script){
+    background: #fff !important;
+    background-color: #fff !important;
+    color: #353535 !important;
+    text-align: center !important;
+    border: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    margin: 0 auto !important;
+    min-height: 0 !important;
+}
+.ocultar-bg main :not( i, style, script,.elementor-hidden-mobile,.elementor-hidden-mobile,.elementor-hidden-desktop),
+.ocultar-bg footer :not( i, style, script,.elementor-hidden-mobile,.elementor-hidden-mobile,.elementor-hidden-desktop){
+    padding: 2px !important;
+    display: block !important;
+    height: auto !important;
+    width: 100% !important;
+    line-height: 1.2 !important;
+    opacity: 1 !important;
+    visibility: visible;
+    transition: none !important;
+    transform: none !important;
+    position: relative !important;
+}
+.ocultar-bg main ::before, 
+.ocultar-bg footer ::before{
+    padding: 2px !important;
+    margin: 0 auto !important;
+    display: block !important;
+    background: #fff !important;
+    background-color: #fff !important;
+}
+.ocultar-bg p,.ocultar-bg span,.ocultar-bg h1,.ocultar-bg h2,.ocultar-bg h3,.ocultar-bg h4,.ocultar-bg h6,.ocultar-bg h6{
+    opacity: 1;
+    visibility: visible;
+}
+.ocultar-bg style,.ocultar-bg script{
+    display: none !important;
+    visibility: hidden !important;
+}
+.ocultar-bg img,.ocultar-bg video,.ocultar-bg svg{
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    max-height: 0 !important;
+    width: 0;
+    max-width: 0; 
+    opacity: 0;
 }
 
 
-#menu-accesibilidad {
-    position: fixed;
-    /* top: 310px;*/
-    left: -200px;
-    /* Posiciona el menú fuera de la pantalla */
-    width: 200px;
-    max-height: 350px;
-    min-height: 250px;
-    background-color: rgba(255, 255, 255, 0.3);
-    color: var(--e-global-color-nvprimaryaccent);
-    transition: left 0.3s ease-out;
-    z-index: 9999;
-    /* Agrega una transición suave al desplazar el menú */
+
+/*################### alto contraste ###################*/
+
+/*html body.alto-contraste *{
+    background: #000 !important;
+    background-color: black !important;
+    color: #fff !important;
+}*/
+
+html body.alto-contraste .elementor-shape {
+  display: none !important;
 }
-
-
-#menu-accesibilidad.mostrar {
-    left: 45px;
-    z-index:10;
-    /* Desplaza el menú al centro de la pantalla */
-    /*top: 255px;*/
+html body.alto-contraste {
+    /* This stylesheet based on 0WonB.css generated by Accessibility CSS Generator, (c) Silas S. Brown 2006-2015.  Version 0.9844 */
 }
-
-
-#menu-accesibilidad.mostrar:hover {
-    left: 45px;
-    /* Desplaza el menú al centro de la pantalla */
-    /*top: 255px;*/
+html body.alto-contraste .placebo {
+line-height: normal;
+}
+html body.alto-contraste * {
+-webkit-box-shadow: none !important;
+box-shadow: none !important;
+}
+html body.alto-contraste a,
+html body.alto-contraste abbr,
+html body.alto-contraste acronym,
+html body.alto-contraste address,
+html body.alto-contraste article,
+html body.alto-contraste aside,
+html body.alto-contraste b,
+html body.alto-contraste basefont,
+html body.alto-contraste bdi,
+html body.alto-contraste big,
+html body.alto-contraste blink,
+html body.alto-contraste blockquote,
+html body.alto-contraste body,
+html body.alto-contraste button,
+html body.alto-contraste canvas,
+html body.alto-contraste caption,
+html body.alto-contraste center,
+html body.alto-contraste cite,
+html body.alto-contraste code,
+html body.alto-contraste col,
+html body.alto-contraste colgroup,
+html body.alto-contraste command,
+html body.alto-contraste dd,
+html body.alto-contraste del,
+html body.alto-contraste details,
+html body.alto-contraste dfn,
+html body.alto-contraste dir,
+html body.alto-contraste div,
+html body.alto-contraste dl,
+html body.alto-contraste dt,
+html body.alto-contraste em,
+html body.alto-contraste embed,
+html body.alto-contraste fieldset,
+html body.alto-contraste figcaption,
+html body.alto-contraste figure,
+html body.alto-contraste font,
+html body.alto-contraste footer,
+html body.alto-contraste form,
+html body.alto-contraste h1,
+html body.alto-contraste h1 a,
+html body.alto-contraste h1 a b,
+html body.alto-contraste h1 abbr,
+html body.alto-contraste h1 b,
+html body.alto-contraste h1 center,
+html body.alto-contraste h1 em,
+html body.alto-contraste h1 i,
+html body.alto-contraste h1 span,
+html body.alto-contraste h1 strong,
+html body.alto-contraste h2,
+html body.alto-contraste h2 a,
+html body.alto-contraste h2 a b,
+html body.alto-contraste h2 abbr,
+html body.alto-contraste h2 b,
+html body.alto-contraste h2 center,
+html body.alto-contraste h2 em,
+html body.alto-contraste h2 i,
+html body.alto-contraste h2 span,
+html body.alto-contraste h2 strong,
+html body.alto-contraste h3,
+html body.alto-contraste h3 a,
+html body.alto-contraste h3 a b,
+html body.alto-contraste h3 abbr,
+html body.alto-contraste h3 b,
+html body.alto-contraste h3 center,
+html body.alto-contraste h3 em,
+html body.alto-contraste h3 i,
+html body.alto-contraste h3 span,
+html body.alto-contraste h3 strong,
+html body.alto-contraste h4,
+html body.alto-contraste h4 a,
+html body.alto-contraste h4 a b,
+html body.alto-contraste h4 abbr,
+html body.alto-contraste h4 b,
+html body.alto-contraste h4 center,
+html body.alto-contraste h4 em,
+html body.alto-contraste h4 i,
+html body.alto-contraste h4 span,
+html body.alto-contraste h4 strong,
+html body.alto-contraste h5,
+html body.alto-contraste h5 a,
+html body.alto-contraste h5 a b,
+html body.alto-contraste h5 abbr,
+html body.alto-contraste h5 b,
+html body.alto-contraste h5 center,
+html body.alto-contraste h5 em,
+html body.alto-contraste h5 i,
+html body.alto-contraste h5 span,
+html body.alto-contraste h5 strong,
+html body.alto-contraste h6,
+html body.alto-contraste h6 a,
+html body.alto-contraste h6 a b,
+html body.alto-contraste h6 abbr,
+html body.alto-contraste h6 b,
+html body.alto-contraste h6 center,
+html body.alto-contraste h6 em,
+html body.alto-contraste h6 i,
+html body.alto-contraste h6 span,
+html body.alto-contraste h6 strong,
+html body.alto-contraste header,
+html body.alto-contraste hgroup,
+html body.alto-contraste html,
+html body.alto-contraste i,
+html body.alto-contraste iframe,
+html body.alto-contraste img,
+html body.alto-contraste input,
+html body.alto-contraste ins,
+html body.alto-contraste kbd,
+html body.alto-contraste label,
+html body.alto-contraste legend,
+html body.alto-contraste li,
+html body.alto-contraste listing,
+html body.alto-contraste main,
+html body.alto-contraste mark,
+html body.alto-contraste marquee,
+html body.alto-contraste menu,
+html body.alto-contraste meter,
+html body.alto-contraste multicol,
+html body.alto-contraste nav,
+html body.alto-contraste nobr,
+html body.alto-contraste object,
+html body.alto-contraste ol,
+html body.alto-contraste option,
+html body.alto-contraste output,
+html body.alto-contraste p,
+html body.alto-contraste plaintext,
+html body.alto-contraste pre,
+html body.alto-contraste progress,
+html body.alto-contraste q,
+html body.alto-contraste rb,
+html body.alto-contraste rp,
+html body.alto-contraste rt,
+html body.alto-contraste ruby,
+html body.alto-contraste s,
+html body.alto-contraste samp,
+html body.alto-contraste section,
+html body.alto-contraste select,
+html body.alto-contraste small,
+html body.alto-contraste span,
+html body.alto-contraste strike,
+html body.alto-contraste strong,
+html body.alto-contraste sub,
+html body.alto-contraste summary,
+html body.alto-contraste sup,
+html body.alto-contraste svg,
+html body.alto-contraste table,
+html body.alto-contraste tbody,
+html body.alto-contraste td,
+html body.alto-contraste text,
+html body.alto-contraste textarea,
+html body.alto-contraste th,
+html body.alto-contraste thead,
+html body.alto-contraste time,
+html body.alto-contraste tr,
+html body.alto-contraste tt,
+html body.alto-contraste u,
+html body.alto-contraste ul,
+html body.alto-contraste var,
+html body.alto-contraste video,
+html body.alto-contraste xmp {
+-moz-appearance: none !important;
+-moz-user-select: text !important;
+-webkit-user-select: text !important;
+background-image: none !important;
+text-shadow: none !important;
+user-select: text !important;
+}
+html body.alto-contraste a,
+html body.alto-contraste abbr,
+html body.alto-contraste acronym,
+html body.alto-contraste address,
+html body.alto-contraste article,
+html body.alto-contraste aside,
+html body.alto-contraste b,
+html body.alto-contraste basefont,
+html body.alto-contraste bdi,
+html body.alto-contraste big,
+html body.alto-contraste blink,
+html body.alto-contraste blockquote,
+html body.alto-contraste body,
+html body.alto-contraste canvas,
+html body.alto-contraste caption,
+html body.alto-contraste center,
+html body.alto-contraste cite,
+html body.alto-contraste code,
+html body.alto-contraste col,
+html body.alto-contraste colgroup,
+html body.alto-contraste command,
+html body.alto-contraste dd,
+html body.alto-contraste del,
+html body.alto-contraste details,
+html body.alto-contraste dfn,
+html body.alto-contraste dir,
+html body.alto-contraste div,
+html body.alto-contraste dl,
+html body.alto-contraste dt,
+html body.alto-contraste em,
+html body.alto-contraste embed,
+html body.alto-contraste fieldset,
+html body.alto-contraste figcaption,
+html body.alto-contraste figure,
+html body.alto-contraste font,
+html body.alto-contraste footer,
+html body.alto-contraste form,
+html body.alto-contraste h1,
+html body.alto-contraste h1 a,
+html body.alto-contraste h1 a b,
+html body.alto-contraste h1 abbr,
+html body.alto-contraste h1 b,
+html body.alto-contraste h1 center,
+html body.alto-contraste h1 em,
+html body.alto-contraste h1 i,
+html body.alto-contraste h1 span,
+html body.alto-contraste h1 strong,
+html body.alto-contraste h2,
+html body.alto-contraste h2 a,
+html body.alto-contraste h2 a b,
+html body.alto-contraste h2 abbr,
+html body.alto-contraste h2 b,
+html body.alto-contraste h2 center,
+html body.alto-contraste h2 em,
+html body.alto-contraste h2 i,
+html body.alto-contraste h2 span,
+html body.alto-contraste h2 strong,
+html body.alto-contraste h3,
+html body.alto-contraste h3 a,
+html body.alto-contraste h3 a b,
+html body.alto-contraste h3 abbr,
+html body.alto-contraste h3 b,
+html body.alto-contraste h3 center,
+html body.alto-contraste h3 em,
+html body.alto-contraste h3 i,
+html body.alto-contraste h3 span,
+html body.alto-contraste h3 strong,
+html body.alto-contraste h4,
+html body.alto-contraste h4 a,
+html body.alto-contraste h4 a b,
+html body.alto-contraste h4 abbr,
+html body.alto-contraste h4 b,
+html body.alto-contraste h4 center,
+html body.alto-contraste h4 em,
+html body.alto-contraste h4 i,
+html body.alto-contraste h4 span,
+html body.alto-contraste h4 strong,
+html body.alto-contraste h5,
+html body.alto-contraste h5 a,
+html body.alto-contraste h5 a b,
+html body.alto-contraste h5 abbr,
+html body.alto-contraste h5 b,
+html body.alto-contraste h5 center,
+html body.alto-contraste h5 em,
+html body.alto-contraste h5 i,
+html body.alto-contraste h5 span,
+html body.alto-contraste h5 strong,
+html body.alto-contraste h6,
+html body.alto-contraste h6 a,
+html body.alto-contraste h6 a b,
+html body.alto-contraste h6 abbr,
+html body.alto-contraste h6 b,
+html body.alto-contraste h6 center,
+html body.alto-contraste h6 em,
+html body.alto-contraste h6 i,
+html body.alto-contraste h6 span,
+html body.alto-contraste h6 strong,
+html body.alto-contraste header,
+html body.alto-contraste hgroup,
+html body.alto-contraste html,
+html body.alto-contraste i,
+html body.alto-contraste iframe,
+html body.alto-contraste input,
+html body.alto-contraste ins,
+html body.alto-contraste kbd,
+html body.alto-contraste label,
+html body.alto-contraste legend,
+html body.alto-contraste li,
+html body.alto-contraste listing,
+html body.alto-contraste main,
+html body.alto-contraste mark,
+html body.alto-contraste marquee,
+html body.alto-contraste menu,
+html body.alto-contraste meter,
+html body.alto-contraste multicol,
+html body.alto-contraste nav:not(#pojo-a11y-toolbar),
+html body.alto-contraste nobr,
+html body.alto-contraste object,
+html body.alto-contraste ol,
+html body.alto-contraste option,
+html body.alto-contraste output,
+html body.alto-contraste p,
+html body.alto-contraste plaintext,
+html body.alto-contraste pre,
+html body.alto-contraste progress,
+html body.alto-contraste q,
+html body.alto-contraste rb,
+html body.alto-contraste rp,
+html body.alto-contraste rt,
+html body.alto-contraste ruby,
+html body.alto-contraste s,
+html body.alto-contraste samp,
+html body.alto-contraste section,
+html body.alto-contraste small,
+html body.alto-contraste span,
+html body.alto-contraste strike,
+html body.alto-contraste strong,
+html body.alto-contraste sub,
+html body.alto-contraste summary,
+html body.alto-contraste sup,
+html body.alto-contraste svg,
+html body.alto-contraste table,
+html body.alto-contraste tbody,
+html body.alto-contraste td,
+html body.alto-contraste text,
+html body.alto-contraste textarea,
+html body.alto-contraste th,
+html body.alto-contraste thead,
+html body.alto-contraste time,
+html body.alto-contraste tr,
+html body.alto-contraste tt,
+html body.alto-contraste u,
+html body.alto-contraste ul,
+html body.alto-contraste var,
+html body.alto-contraste video,
+html body.alto-contraste xmp {
+background: black !important;
+background-color: black !important;
+}
+html body.alto-contraste a,
+html body.alto-contraste article,
+html body.alto-contraste aside,
+html body.alto-contraste basefont,
+html body.alto-contraste bdi,
+html body.alto-contraste big,
+html body.alto-contraste blink,
+html body.alto-contraste blockquote,
+html body.alto-contraste body,
+html body.alto-contraste button,
+html body.alto-contraste canvas,
+html body.alto-contraste caption,
+html body.alto-contraste center,
+html body.alto-contraste code,
+html body.alto-contraste col,
+html body.alto-contraste colgroup,
+html body.alto-contraste command,
+html body.alto-contraste dd,
+html body.alto-contraste del,
+html body.alto-contraste details,
+html body.alto-contraste dir,
+html body.alto-contraste div,
+html body.alto-contraste dl,
+html body.alto-contraste dt,
+html body.alto-contraste embed,
+html body.alto-contraste fieldset,
+html body.alto-contraste figcaption,
+html body.alto-contraste figure,
+html body.alto-contraste font,
+html body.alto-contraste footer,
+html body.alto-contraste form,
+html body.alto-contraste header,
+html body.alto-contraste hgroup,
+html body.alto-contraste html,
+html body.alto-contraste iframe,
+html body.alto-contraste img,
+html body.alto-contraste input,
+html body.alto-contraste ins,
+html body.alto-contraste kbd,
+html body.alto-contraste label,
+html body.alto-contraste legend,
+html body.alto-contraste li,
+html body.alto-contraste listing,
+html body.alto-contraste main,
+html body.alto-contraste mark,
+html body.alto-contraste marquee,
+html body.alto-contraste menu,
+html body.alto-contraste meter,
+html body.alto-contraste multicol,
+html body.alto-contraste nav,
+html body.alto-contraste nobr,
+html body.alto-contraste object,
+html body.alto-contraste ol,
+html body.alto-contraste option,
+html body.alto-contraste output,
+html body.alto-contraste p,
+html body.alto-contraste plaintext,
+html body.alto-contraste pre,
+html body.alto-contraste progress,
+html body.alto-contraste q,
+html body.alto-contraste rb,
+html body.alto-contraste rp,
+html body.alto-contraste rt,
+html body.alto-contraste ruby,
+html body.alto-contraste s,
+html body.alto-contraste samp,
+html body.alto-contraste section,
+html body.alto-contraste select,
+html body.alto-contraste small,
+html body.alto-contraste span,
+html body.alto-contraste strike,
+html body.alto-contraste sub,
+html body.alto-contraste summary,
+html body.alto-contraste sup,
+html body.alto-contraste svg,
+html body.alto-contraste table,
+html body.alto-contraste tbody,
+html body.alto-contraste td,
+html body.alto-contraste text,
+html body.alto-contraste textarea,
+html body.alto-contraste th,
+html body.alto-contraste thead,
+html body.alto-contraste time,
+html body.alto-contraste tr,
+html body.alto-contraste tt,
+html body.alto-contraste ul,
+html body.alto-contraste var,
+html body.alto-contraste video,
+html body.alto-contraste xmp {
+color: white !important;
+}
+html body.alto-contraste abbr,
+html body.alto-contraste acronym,
+html body.alto-contraste b,
+html body.alto-contraste b span,
+html body.alto-contraste h1 b,
+html body.alto-contraste h1 strong,
+html body.alto-contraste h2 b,
+html body.alto-contraste h2 strong,
+html body.alto-contraste h3 b,
+html body.alto-contraste h3 strong,
+html body.alto-contraste h4 b,
+html body.alto-contraste h4 strong,
+html body.alto-contraste h5 b,
+html body.alto-contraste h5 strong,
+html body.alto-contraste h6 b,
+html body.alto-contraste h6 strong,
+html body.alto-contraste strong,
+html body.alto-contraste strong span {
+color: yellow !important;
+}
+html body.alto-contraste address,
+html body.alto-contraste address span,
+html body.alto-contraste cite,
+html body.alto-contraste cite span,
+html body.alto-contraste dfn,
+html body.alto-contraste dfn span,
+html body.alto-contraste em,
+html body.alto-contraste em span,
+html body.alto-contraste h1 em,
+html body.alto-contraste h1 i,
+html body.alto-contraste h2 em,
+html body.alto-contraste h2 i,
+html body.alto-contraste h3 em,
+html body.alto-contraste h3 i,
+html body.alto-contraste h4 em,
+html body.alto-contraste h4 i,
+html body.alto-contraste h5 em,
+html body.alto-contraste h5 i,
+html body.alto-contraste h6 em,
+html body.alto-contraste h6 i,
+html body.alto-contraste i,
+html body.alto-contraste i span,
+html body.alto-contraste u,
+html body.alto-contraste u span {
+color: #FFFF80 !important;
+}
+html body.alto-contraste dt {
+border-top: thin solid grey !important;
+}
+html body.alto-contraste h1,
+html body.alto-contraste h1 a,
+html body.alto-contraste h1 a b,
+html body.alto-contraste h1 abbr,
+html body.alto-contraste h1 center,
+html body.alto-contraste h1 span,
+html body.alto-contraste h2,
+html body.alto-contraste h2 a,
+html body.alto-contraste h2 a b,
+html body.alto-contraste h2 abbr,
+html body.alto-contraste h2 center,
+html body.alto-contraste h2 span,
+html body.alto-contraste h3,
+html body.alto-contraste h3 a,
+html body.alto-contraste h3 a b,
+html body.alto-contraste h3 abbr,
+html body.alto-contraste h3 center,
+html body.alto-contraste h3 span,
+html body.alto-contraste h4,
+html body.alto-contraste h4 a,
+html body.alto-contraste h4 a b,
+html body.alto-contraste h4 abbr,
+html body.alto-contraste h4 center,
+html body.alto-contraste h4 span,
+html body.alto-contraste h5,
+html body.alto-contraste h5 a,
+html body.alto-contraste h5 a b,
+html body.alto-contraste h5 abbr,
+html body.alto-contraste h5 center,
+html body.alto-contraste h5 span,
+html body.alto-contraste h6,
+html body.alto-contraste h6 a,
+html body.alto-contraste h6 a b,
+html body.alto-contraste h6 abbr,
+html body.alto-contraste h6 center,
+html body.alto-contraste h6 span {
+color: #40C090 !important;
+}
+html body.alto-contraste img {
+background: #808080 !important;
+background-color: #808080 !important;
+}
+html body.alto-contraste abbr,
+html body.alto-contraste acronym {
+border-bottom: 1px dotted !important;
+}
+html body.alto-contraste :focus {
+outline: thin dotted !important;
+}
+html body.alto-contraste a.button,
+html body.alto-contraste a.button abbr,
+html body.alto-contraste a.button acronym,
+html body.alto-contraste a.button b,
+html body.alto-contraste a.button basefont,
+html body.alto-contraste a.button big,
+html body.alto-contraste a.button br,
+html body.alto-contraste a.button code,
+html body.alto-contraste a.button div,
+html body.alto-contraste a.button em,
+html body.alto-contraste a.button font,
+html body.alto-contraste a.button h1,
+html body.alto-contraste a.button h2,
+html body.alto-contraste a.button h3,
+html body.alto-contraste a.button h4,
+html body.alto-contraste a.button h5,
+html body.alto-contraste a.button h6,
+html body.alto-contraste a.button i,
+html body.alto-contraste a.button kbd,
+html body.alto-contraste a.button rb,
+html body.alto-contraste a.button rp,
+html body.alto-contraste a.button rt,
+html body.alto-contraste a.button ruby,
+html body.alto-contraste a.button samp,
+html body.alto-contraste a.button small,
+html body.alto-contraste a.button span,
+html body.alto-contraste a.button strong,
+html body.alto-contraste a.button tt,
+html body.alto-contraste a.button u,
+html body.alto-contraste a.button var,
+html body.alto-contraste a:link,
+html body.alto-contraste a:link abbr,
+html body.alto-contraste a:link acronym,
+html body.alto-contraste a:link b,
+html body.alto-contraste a:link basefont,
+html body.alto-contraste a:link big,
+html body.alto-contraste a:link br,
+html body.alto-contraste a:link code,
+html body.alto-contraste a:link div,
+html body.alto-contraste a:link em,
+html body.alto-contraste a:link font,
+html body.alto-contraste a:link h1,
+html body.alto-contraste a:link h2,
+html body.alto-contraste a:link h3,
+html body.alto-contraste a:link h4,
+html body.alto-contraste a:link h5,
+html body.alto-contraste a:link h6,
+html body.alto-contraste a:link i,
+html body.alto-contraste a:link kbd,
+html body.alto-contraste a:link rb,
+html body.alto-contraste a:link rp,
+html body.alto-contraste a:link rt,
+html body.alto-contraste a:link ruby,
+html body.alto-contraste a:link samp,
+html body.alto-contraste a:link small,
+html body.alto-contraste a:link span,
+html body.alto-contraste a:link strong,
+html body.alto-contraste a:link tt,
+html body.alto-contraste a:link u,
+html body.alto-contraste a:link var,
+html body.alto-contraste div#secondaryNav div#documentNavigation ul.navigationTabs li.tabItem {
+color: #0080FF !important;
+}
+html body.alto-contraste button,
+html body.alto-contraste input,
+html body.alto-contraste textarea,
+html body.alto-contraste select,
+html body.alto-contraste table,
+html body.alto-contraste td,
+html body.alto-contraste th,
+html body.alto-contraste tr,
+html body.alto-contraste tt {
+border: 1px solid #ffffff !important;
+}
+html body.alto-contraste button {
+background: #600040 !important;
+background-color: #600040 !important;
+}
+html body.alto-contraste select {
+-webkit-appearance: listbox !important;
+background: #600060 !important;
+background-color: #600060 !important;
+}
+html body.alto-contraste a:visited,
+html body.alto-contraste a:visited abbr,
+html body.alto-contraste a:visited acronym,
+html body.alto-contraste a:visited b,
+html body.alto-contraste a:visited basefont,
+html body.alto-contraste a:visited big,
+html body.alto-contraste a:visited br,
+html body.alto-contraste a:visited code,
+html body.alto-contraste a:visited div,
+html body.alto-contraste a:visited em,
+html body.alto-contraste a:visited font,
+html body.alto-contraste a:visited h1,
+html body.alto-contraste a:visited h2,
+html body.alto-contraste a:visited h3,
+html body.alto-contraste a:visited h4,
+html body.alto-contraste a:visited h5,
+html body.alto-contraste a:visited h6,
+html body.alto-contraste a:visited i,
+html body.alto-contraste a:visited kbd,
+html body.alto-contraste a:visited rb,
+html body.alto-contraste a:visited rp,
+html body.alto-contraste a:visited rt,
+html body.alto-contraste a:visited ruby,
+html body.alto-contraste a:visited samp,
+html body.alto-contraste a:visited small,
+html body.alto-contraste a:visited span,
+html body.alto-contraste a:visited strong,
+html body.alto-contraste a:visited tt,
+html body.alto-contraste a:visited u,
+html body.alto-contraste a:visited var,
+html body.alto-contraste div#secondaryNav div#documentNavigation ul.navigationTabs li.tabItem.active {
+color: #00FFFF !important;
+}
+html body.alto-contraste ::selection,
+html body.alto-contraste ::-moz-selection {
+background: #4080c0 !important;
+background-color: #4080c0 !important;
+}
+html body.alto-contraste a.button:hover,
+html body.alto-contraste a.button:hover abbr,
+html body.alto-contraste a.button:hover acronym,
+html body.alto-contraste a.button:hover b,
+html body.alto-contraste a.button:hover basefont,
+html body.alto-contraste a.button:hover big,
+html body.alto-contraste a.button:hover br,
+html body.alto-contraste a.button:hover code,
+html body.alto-contraste a.button:hover div,
+html body.alto-contraste a.button:hover em,
+html body.alto-contraste a.button:hover font,
+html body.alto-contraste a.button:hover h1,
+html body.alto-contraste a.button:hover h2,
+html body.alto-contraste a.button:hover h3,
+html body.alto-contraste a.button:hover h4,
+html body.alto-contraste a.button:hover h5,
+html body.alto-contraste a.button:hover h6,
+html body.alto-contraste a.button:hover i,
+html body.alto-contraste a.button:hover kbd,
+html body.alto-contraste a.button:hover rb,
+html body.alto-contraste a.button:hover rp,
+html body.alto-contraste a.button:hover rt,
+html body.alto-contraste a.button:hover ruby,
+html body.alto-contraste a.button:hover samp,
+html body.alto-contraste a.button:hover small,
+html body.alto-contraste a.button:hover span,
+html body.alto-contraste a.button:hover strong,
+html body.alto-contraste a.button:hover tt,
+html body.alto-contraste a.button:hover u,
+html body.alto-contraste a.button:hover var,
+html body.alto-contraste a:link:hover,
+html body.alto-contraste a:link:hover abbr,
+html body.alto-contraste a:link:hover acronym,
+html body.alto-contraste a:link:hover b,
+html body.alto-contraste a:link:hover basefont,
+html body.alto-contraste a:link:hover big,
+html body.alto-contraste a:link:hover br,
+html body.alto-contraste a:link:hover code,
+html body.alto-contraste a:link:hover div,
+html body.alto-contraste a:link:hover em,
+html body.alto-contraste a:link:hover font,
+html body.alto-contraste a:link:hover h1,
+html body.alto-contraste a:link:hover h2,
+html body.alto-contraste a:link:hover h3,
+html body.alto-contraste a:link:hover h4,
+html body.alto-contraste a:link:hover h5,
+html body.alto-contraste a:link:hover h6,
+html body.alto-contraste a:link:hover i,
+html body.alto-contraste a:link:hover kbd,
+html body.alto-contraste a:link:hover rb,
+html body.alto-contraste a:link:hover rp,
+html body.alto-contraste a:link:hover rt,
+html body.alto-contraste a:link:hover ruby,
+html body.alto-contraste a:link:hover samp,
+html body.alto-contraste a:link:hover small,
+html body.alto-contraste a:link:hover span,
+html body.alto-contraste a:link:hover strong,
+html body.alto-contraste a:link:hover tt,
+html body.alto-contraste a:link:hover u,
+html body.alto-contraste a:link:hover var,
+html body.alto-contraste a:visited:hover,
+html body.alto-contraste a:visited:hover abbr,
+html body.alto-contraste a:visited:hover acronym,
+html body.alto-contraste a:visited:hover b,
+html body.alto-contraste a:visited:hover basefont,
+html body.alto-contraste a:visited:hover big,
+html body.alto-contraste a:visited:hover br,
+html body.alto-contraste a:visited:hover code,
+html body.alto-contraste a:visited:hover div,
+html body.alto-contraste a:visited:hover em,
+html body.alto-contraste a:visited:hover font,
+html body.alto-contraste a:visited:hover h1,
+html body.alto-contraste a:visited:hover h2,
+html body.alto-contraste a:visited:hover h3,
+html body.alto-contraste a:visited:hover h4,
+html body.alto-contraste a:visited:hover h5,
+html body.alto-contraste a:visited:hover h6,
+html body.alto-contraste a:visited:hover i,
+html body.alto-contraste a:visited:hover kbd,
+html body.alto-contraste a:visited:hover rb,
+html body.alto-contraste a:visited:hover rp,
+html body.alto-contraste a:visited:hover rt,
+html body.alto-contraste a:visited:hover ruby,
+html body.alto-contraste a:visited:hover samp,
+html body.alto-contraste a:visited:hover small,
+html body.alto-contraste a:visited:hover span,
+html body.alto-contraste a:visited:hover strong,
+html body.alto-contraste a:visited:hover tt,
+html body.alto-contraste a:visited:hover u,
+html body.alto-contraste a:visited:hover var {
+background: #400000 !important;
+background-color: #400000 !important;
+}
+html body.alto-contraste body > input#site + div#wrapper span.mk,
+html body.alto-contraste body > input#site + div#wrapper span.mk b,
+html body.alto-contraste input[type=reset] {
+background: #400060 !important;
+background-color: #400060 !important;
+}
+html body.alto-contraste div[role="button"],
+html body.alto-contraste input[type=button],
+html body.alto-contraste input[type=submit] {
+background: #600040 !important;
+background-color: #600040 !important;
+}
+html body.alto-contraste input[type=search] {
+-webkit-appearance: textfield !important;
+}
+html body.alto-contraste html button[disabled],
+html body.alto-contraste html input[disabled],
+html body.alto-contraste html select[disabled],
+html body.alto-contraste html textarea[disabled] {
+background: #404040 !important;
+background-color: #404040 !important;
+}
+html body.alto-contraste .menu li a span.label {
+text-transform: none !important;
+}
+html body.alto-contraste .menu li a span.label,
+html body.alto-contraste div.jwplayer span.jwcontrolbar,
+html body.alto-contraste div.jwplayer span.jwcontrols {
+display: inline !important;
+}
+html body.alto-contraste a:link.new,
+html body.alto-contraste a:link.new i,
+html body.alto-contraste a:link.new b,
+html body.alto-contraste span.Apple-style-span {
+color: #FFFF40 !important;
+}
+html body.alto-contraste body.mediawiki img.tex {
+background: white !important;
+background-color: white !important;
+border: white solid 3px !important;
+}
+html body.alto-contraste text > tspan:first-letter,
+html body.alto-contraste text > tspan:first-line {
+background: inherit !important;
+background-color: inherit !important;
+color: inherit !important;
+}
+html body.alto-contraste div.sbtc div.sbsb_a li.sbsb_d div,
+html body.alto-contraste table.gssb_c tr.gssb_i a,
+html body.alto-contraste table.gssb_c tr.gssb_i b,
+html body.alto-contraste table.gssb_c tr.gssb_i span,
+html body.alto-contraste table.gssb_c tr.gssb_i td {
+background: #003050 !important;
+background-color: #003050 !important;
+}
+html body.alto-contraste img[width="18"][height="18"] {
+height: 18px !important;
+width: 18px !important;
+}
+html body.alto-contraste a > span.iconHelp:empty:after {
+content: "Help" !important;
+}
+html body.alto-contraste div#gmap,
+html body.alto-contraste div#gmap * {
+background: initial !important;
 }

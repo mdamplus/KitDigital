@@ -1,0 +1,38 @@
+/* Estilos base para el label */
+.copy-label {
+    margin-left: 20%;
+    cursor: pointer;
+    color: #000; /* Color de texto normal */
+}
+
+/* Estilos para el label al pasar el cursor sobre él */
+.copy-label:hover {
+    color: #0074e4;/*Cambia el color de la fuente*/
+}
+
+.little_margin{
+    
+    margin: 20px 10px;
+}
+
+.label-bold{
+    font-weight:bold;
+}
+
+
+.centered-button {
+    display: flex;
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+}
+
+#editor_ifr {
+    width: 90%;
+    min-height: 400px;
+    border: 1px solid #ccc;
+}
+
+/*Modifica la altura mínima del editor en modo HTML, de esa forma se iguala con el modo VISUAL adaptado a #editor_ifr*/
+#editor{
+    min-height: 400px;
+}

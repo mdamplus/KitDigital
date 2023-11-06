@@ -1,16 +1,14 @@
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
-
-#tts_button {
+.tts_play #tts_button{background-color: rgb(168, 212, 198,0.7);}
+#tts_button{
     position: fixed;
-    border: 1px solid #fff;
-    top: 200px;
+    border:solid 1px #ccc;
+    bottom: 190px;
     left: -12px;
-   /* transform: translateY(-50%);*/
-    background-color: rgba(255,255,255,0.3);
+    background-color: rgba(255,255,255,0.7);
     color: var(--e-global-color-nvprimaryaccent);
     width: 52px;
     height: 40px;
-    /* border-radius: 50%; */
+    border-radius: 0 10px 10px 0;
     box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
     cursor: pointer;
     display: flex;
@@ -20,16 +18,15 @@
     margin-bottom: 5px;
     z-index: 9999;
 }
-
-  
-  #tts_button i {
-    font-size: 24px;
-    padding-left:10px;
-    z-index: 9999;
-  }
-
-  #tts_button:hover {
-    transform: translateX(10px);
-    top: 200px;
-    z-index: 9999;
+#tts_button i {
+  font-size: 24px;
+  padding-left:10px;
+  z-index: 9999;
+}
+#tts_button:hover {
+  transform: translateX(4px);
+  z-index: 9999;
+}
+.tts_play #tts_button .dashicons.dashicons-controls-volumeon::before{
+  content: "\f523" !important;
 }

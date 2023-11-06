@@ -1,43 +1,35 @@
-/* INGLES
-
-jQuery(document).ready(function($) {
-    $('#tts_button').click(function() {
-      var text = '';
-      $('p').each(function() {
-        text += $(this).text() + ' ';
-      });
-      responsiveVoice.speak(text);
-    });
-  });
-
-*/
-
-/* Español */
-/*  jQuery(document).ready(function($) {
-    $('#tts_button').click(function() {
-      var text = '';
-      $('p').each(function() {
-        text += $(this).text() + ' ';
-      });
-      responsiveVoice.speak(text, "Spanish Latin American Female", {locale: 'es-ES'});
-    });
-  });*/
-
-
   /* multiidioma */
   jQuery(document).ready(function($) {
     var lang = $('html').attr('lang'); // Obtener el valor de la etiqueta lang
   
     $('#tts_button').click(function() {
-      var text = '';
-      $('p').each(function() {
-        text += $(this).text() + '';
-      });
-      responsiveVoice.speak(text, "Spanish Latin American Female", {locale: lang, rate: 0.8});
-
-      //responsiveVoice.speak(text, "Spanish Latin American Female", {locale: lang, rate:0.5}); // Pasar el valor de lang a la función y con rate la velocidad de lectura
+      if ($('body').hasClass('tts_play')){
+        $('body').removeClass('tts_play');
+        if(responsiveVoice.isPlaying()) {
+          responsiveVoice.cancel();
+        }
+      }else{
+        var text = '';
+        var elementText='';
+        $('body main:first').find('p,h1,h2,h3,h4,h5').each(function() {
+            elementText= $(this).text() || '';
+            text += (elementText + (elementText.slice(-1)=='.'?' ':'. '));
+        });
+        if(responsiveVoice.isPlaying()) {
+          responsiveVoice.cancel();
+        }
+        responsiveVoice.speak(text, "Spanish Female", {locale: lang, rate: 0.9, onstart: is_speaking, onend: not_speaking});
+      }
     });
-  
+    function is_speaking(){
+      $('body').addClass('tts_play');
+    }
+    function not_speaking(){
+      if(!responsiveVoice.isPlaying()) {
+        $('body').removeClass('tts_play');
+      }
+    }
+    
     // Actualizar el valor de lang cada vez que cambie la página
     $(document).on('DOMSubtreeModified', 'html', function(){
       lang = $('html').attr('lang');

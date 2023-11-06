@@ -1,11 +1,13 @@
 <?php
 
 /*
-Plugin Name: SVG Image Shortcoder - Kit Digital Informaticasa
+Plugin Name: Accesibilidad - Kit Digital Informaticasa
 Plugin URI: https://informaticasa.es
-Description: This plugin allow to insert a shortcode with legal logos for Spanish KitDigital using SVG vector logos, switching color,width and Height plugin description. <a href="https://github.com/mdamplus/KitDigital">Git Hub Plugin DATA</a> | <a href="https://martinarnedo.es/">Author Website</a> | <a href="https://informaticasa.es/servicios/kit-digital/">Kit Digital</a>
+Description: Este plugin permite crear e insertar shortcodes con información legal sobre la empresa y permite insertar la publicidad gráfica obligatoria sobre Kit Digital e informáticasa en formato vectorial svg. Por otro lado, se han agregado funcionalidades de accesibilidad y la capacidad de crear de forma predeterminada las páginas de "Avisos legales", "Política de privacidad", "Condiciones de Venta" y "Garantía de devolución"
 
-Version:2023.3
+<strong>Descripción del plugin.</strong> <a href="https://github.com/mdamplus/KitDigital">Git Hub Plugin DATA</a> | <a href="https://martinarnedo.es/">Author Website</a> | <a href="https://informaticasa.es/servicios/kit-digital/">Kit Digital</a> 
+
+Version:2023.4
 Author: Martín D. Arnedo Mahr
 Author URI: https://github.com/mdamplus/KitDigital
 
@@ -17,6 +19,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
+require_once(plugin_dir_path(__FILE__) . 'modules/text-to-speech.php');
+require_once(plugin_dir_path(__FILE__) . 'modules/accessible.php');
 require_once(plugin_dir_path(__FILE__) . 'modules/informaticasa.php');
 require_once(plugin_dir_path(__FILE__) . 'modules/kitdigital.php');
 require_once(plugin_dir_path(__FILE__) . 'modules/brand.php');
@@ -26,8 +30,7 @@ require_once(plugin_dir_path(__FILE__) . 'modules/svg.php');
 require_once(plugin_dir_path(__FILE__) . 'modules/nofilter.php');
 require_once(plugin_dir_path(__FILE__) . 'modules/soporte.php');
 require_once(plugin_dir_path(__FILE__) . 'modules/notice.php');
-require_once(plugin_dir_path(__FILE__) . 'modules/text-to-speech.php');
-require_once(plugin_dir_path(__FILE__) . 'modules/accessible.php');
+require_once(plugin_dir_path(__FILE__) . 'modules/empresa_configuracion.php');
 
 
 
